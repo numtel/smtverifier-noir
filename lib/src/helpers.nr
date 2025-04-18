@@ -30,8 +30,8 @@ pub(crate) fn switcher(sel : u1, l : Field, r : Field) -> (Field, Field) {
 // REVIEW: Fixed byte len
 #[field(bn254)]
 fn fieldAnd(a: Field, b: Field) -> Field {
-    let a_bytes = a.to_be_bytes(32);
-    let b_bytes = b.to_be_bytes(32);
+    let a_bytes : [u8; 32] = a.to_be_bytes();
+    let b_bytes : [u8; 32] = b.to_be_bytes();
 
     let mut c = [0;32];
 
@@ -42,7 +42,7 @@ fn fieldAnd(a: Field, b: Field) -> Field {
     std::field::bytes32_to_field(c)
 }
 
-pub(crate) fn multiAnd<N>(arr : [Field; N]) -> Field {
+pub(crate) fn multiAnd<let N: u32>(arr : [Field; N]) -> Field {
     arr.reduce(|a, b| fieldAnd(a,b))
 }
 

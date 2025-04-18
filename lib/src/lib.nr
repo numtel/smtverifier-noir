@@ -1,2 +1,2 @@
-mod helpers;
-mod verifier;
+pub(crate) mod helpers;
+pub mod verifier;
