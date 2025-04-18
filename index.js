@@ -1,5 +1,5 @@
 import os from 'node:os';
-import { UltraHonkBackend, Barretenberg, RawBuffer } from '@aztec/bb.js';
+import { UltraHonkBackend } from '@aztec/bb.js';
 import { Noir } from '@noir-lang/noir_js';
 
 import { SMT } from "@cedoor/smt";
