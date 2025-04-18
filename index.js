@@ -5,7 +5,7 @@ import { Noir } from '@noir-lang/noir_js';
 import { SMT } from "@cedoor/smt";
 import { poseidon2, poseidon3 } from 'poseidon-lite';
 
-// cd example && noir compile
+// To generate this file, run command: $ nargo compile --package smtverifier_example
 import compiledCircuit from "./target/smtverifier_example.json" with { type: "json" };
 
 const noir = new Noir(compiledCircuit);
