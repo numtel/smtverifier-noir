@@ -18,6 +18,7 @@ type NoirInputs struct {
 	Key  *big.Int `toml:"key"`
 	Value *big.Int `toml:"value"`
 	Siblings         []*big.Int `toml:"siblings"`
+	MissingKey	*big.Int `toml:"missingKey"`
 }
 
 const DefaultZkAddressLen = 20
@@ -136,6 +137,7 @@ func main() {
 		Key:      candidate.Scalar,
 		Value:    weight,
 		Siblings: siblings,
+		MissingKey:	big.NewInt(0),
 	}
 
 	encInputs, err := toml.Marshal(inputs)
