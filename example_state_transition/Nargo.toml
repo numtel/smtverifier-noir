@@ -1,0 +1,8 @@
+[package]
+name = "smtverifier_example_state_transition"
+type = "bin"
+authors = ["Vocdoni"]
+compiler_version = ">=0.22.0"
+
+[dependencies]
+smt = { path = "../lib" }

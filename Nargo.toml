@@ -1,6 +1,7 @@
 [workspace]
 members = [
 	"lib",
-	"example"
+	"example",
+	"example_state_transition"
 ]
 default-member = "lib"
